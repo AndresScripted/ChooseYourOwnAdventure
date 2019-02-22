@@ -6,39 +6,101 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "Do you have homework?",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Yes",
+                    nextLevel: "yesPath",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "No",
+                    nextLevel: "noPath",
                 },
             ]
         },
 
-        cave: {
+        yesPath: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "Will you do it?",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Yes",
+                    nextLevel: "yesPathTwo",
                 },
+                
+                {
+                    text: "No", 
+                    nextLevel: "noOnYesPath"
+                    
+                }
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
+        noPath: {
+            message: "Are you sure?",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Yes",
+                    nextLevel: "yesOnNoPath",
+                },
+                
+                {
+                    text: "No", 
+                    nextLevel: "start"
+                }
+            ]
+        },
+        
+        noOnYesPath: {
+            message: "Are you procrasinating?",
+            choices: [
+                {
+                    text: "Yes",
+                    nextLevel: "yesPathThree",
+                },
+                
+                {
+                    text: "No", 
+                    nextLevel: "noOnYesPathTwo"
+                }
+            ]
+        },
+        
+        yesPathTwo: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "Good for you!",
+            choices: [
+                {
+                    text: "Start!",
                     nextLevel: "start",
                 },
+                
+            ]
+        },
+        
+        yesPathThree: {
+            message: "Dangerous game your playing!",
+            choices: [
+                {
+                    text: "Back to start!",
+                    nextLevel: "start",
+                },
+                
+            ]
+        },
+        yesOnNoPath: {
+            message: "Only you will chose the right path!",
+            choices: [
+                {
+                    text: "start",
+                    nextLevel: "start",
+                },
+                
+                    
+                
             ]
         },
 
