@@ -21,8 +21,8 @@ var game = {
         },
 
         yesPath: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            music: "98_Lost_Mine.mp3",
+            background_image: "intro-bg.jpg",
             message: "Will you do it?",
             choices: [
                 {
@@ -48,12 +48,14 @@ var game = {
                 
                 {
                     text: "No", 
-                    nextLevel: "start"
+                    nextLevel: "noPathTwo"
                 }
             ]
         },
         
         noOnYesPath: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
             message: "Are you procrasinating?",
             choices: [
                 {
@@ -82,6 +84,8 @@ var game = {
         },
         
         yesPathThree: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
             message: "Dangerous game your playing!",
             choices: [
                 {
@@ -96,6 +100,34 @@ var game = {
             choices: [
                 {
                     text: "start",
+                    nextLevel: "start",
+                },
+                
+                    
+                
+            ]
+        },
+        
+       noOnYesPathTwo: {
+           background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You deserve an F",
+            choices: [
+                {
+                    text: "Back to Start!",
+                    nextLevel: "start",
+                },
+                
+                    
+                
+            ]
+        },
+        
+        noPathTwo: {
+            message: "Check and make sure",
+            choices: [
+                {
+                    text: "Start!",
                     nextLevel: "start",
                 },
                 
